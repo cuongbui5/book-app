@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Book_App.Repository;
+using Book_App.Services;
+using Book_App.Views;
+
+namespace Book_App
+{
+    internal static class Program
+    {
+        
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+           
+
+            
+            Application.Run(new BookApp());
+        }
+    }
+}
