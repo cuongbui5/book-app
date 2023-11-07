@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Book_App.Models
 {
-    internal class Order
+    class Order
     {
         public int Id { get; set; }
         public float Total { get; set; }
         public int UserId { get; set; }
         public DateTime CreatedAt { get; set; }
-        public Order() { }
+        public List<OrderItem> Items { get; set;}
+        
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Book_App.Models
 {
-    internal class Book
+    class Book
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -25,8 +25,6 @@ namespace Book_App.Models
 
 
 
-        public Book()
-        {
-        }
+       
     }
 }

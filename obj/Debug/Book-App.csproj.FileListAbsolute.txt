@@ -47,3 +47,4 @@ C:\Users\admin\source\repos\Book-App\obj\Debug\Book_App.Views.App.resources
 C:\Users\admin\source\repos\Book-App\obj\Debug\Book_App.Views.BookItem.resources
 C:\Users\admin\source\repos\Book-App\obj\Debug\Book_App.Views.HomeControl.resources
 C:\Users\admin\source\repos\Book-App\obj\Debug\Book_App.Views.CartItemControl.resources
+C:\Users\admin\source\repos\Book-App\obj\Debug\Book_App.Views.OrderItemControl.resources

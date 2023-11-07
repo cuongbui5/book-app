@@ -1,15 +1,13 @@
-﻿using Book_App.Models;
+﻿using Book_App.Commons;
+using Book_App.Database;
+using Book_App.Models;
 using Book_App.Services;
+using Book_App.Util;
 using Bunifu.UI.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Book_App.Views
@@ -30,7 +28,7 @@ namespace Book_App.Views
 
         public void LoadBooks()
         {
-            BookGridView.DataSource = BookService.Instance.LoadDataSetBooks().Tables[0];
+            BookGridView.DataSource = DBUtil.Instance.GetList("ListBook");
         }
 
       
@@ -38,55 +36,64 @@ namespace Book_App.Views
         private void btnAddBook_Click(object sender, EventArgs e)
         {
             bunifuPages1.SetPage("detailPage");
-            LoadCategories();
+            lblAction.Text = "Create New Book";
             Refresh();
+        }
+
+        private void btnUpdateBook_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dataGridViewRow = BookGridView.CurrentRow;
+            LoadCategoryUpdateBook(dataGridViewRow.Cells["Category"].Value.ToString());
+            bookId = int.Parse(dataGridViewRow.Cells["Id"].Value.ToString());
+            txtBookId.Text = bookId.ToString();
+            txtTitle.Text = dataGridViewRow.Cells["Title"].Value.ToString();
+            txtPrice.Text = dataGridViewRow.Cells["Price"].Value.ToString();
+            txtAuthor.Text = dataGridViewRow.Cells["Author"].Value.ToString();
+            txtDescription.Text = dataGridViewRow.Cells["Description"].Value.ToString();
+            ratingBook.Value = int.Parse(dataGridViewRow.Cells["Rating"].Value.ToString());
+            imageCoverCurrent = (byte[])dataGridViewRow.Cells["Image"].Value;
+            ptImageCover.Image = ImageHelper.byteToImage(imageCoverCurrent);
+            bunifuPages1.SetPage("detailPage");
+            lblAction.Text = "Update Book(#" + bookId + ")";
+
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             LoadBooks();
             bunifuPages1.SetPage("bookList");
+            lblAction.Text = "CRUD BOOK";
         }
 
-        public void LoadCategories()
-        {
-            List<Category> categories = CategoryService.Instance.getListCategory();
-            CategoryDropDown.Items.Clear();    
-            foreach (Category category in categories)
-            {
-                CategoryDropDown.Items.Add(category.Id + "-" + category.Name);
+       
 
-            }
-        }
-
-        public void LoadCategoryUpdateBook(int id)
+        public void LoadCategoryUpdateBook(string category)
         {
-            List<Category> categories = CategoryService.Instance.getListCategory();
-            CategoryDropDown.Items.Clear();
-            foreach (Category category in categories)
+           
+            
+           
+            LoadData.LoadDropDown("category", CategoryDropDown);
+            foreach (var item in CategoryDropDown.Items)
             {
-                CategoryDropDown.Items.Add(category.Id + "-" + category.Name);
-                if(category.Id == id)
+                if (item is DataRowView)
                 {
-                    CategoryDropDown.SelectedItem= category.Id + "-" + category.Name;
+                    DataRowView rowView = item as DataRowView;
+                    string name = rowView["name"].ToString();
+                    if (name ==category)
+                    {
+                        CategoryDropDown.SelectedValue = rowView["id"];
+                        break; 
+                    }
                 }
-
             }
+           
+
         }
 
-        private void bunifuPages1_Selected(object sender, TabControlEventArgs e)
-        {
-            
-        }
+       
 
-        public int getCategoryByString(string input)
-        {
-            string[] parts = input.Split('-');       
-            string id = parts[0];
-            return int.Parse(id);
-               
-            
-        }
+     
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -98,7 +105,9 @@ namespace Book_App.Views
                 string description = txtDescription.Text;
                 float price =float.Parse(txtPrice.Text);
                 int rating = ratingBook.Value;
-                if (title == "" || author == "" || description == "" || rating == 0)
+                int categoryId = (int)CategoryDropDown.SelectedValue;
+               
+                if (title == "" || author == "" || description == "" || rating == 0||categoryId==0)
                 {
                     MessageBox.Show("Fields cannot be left blank and ratings range from 1 to 5!");
                     return;
@@ -109,7 +118,7 @@ namespace Book_App.Views
                     MessageBox.Show("Please choose category!");
                     return;
                 }
-                int categoryId= getCategoryByString(CategoryDropDown.SelectedItem.ToString());
+               
                
                 Book book = new Book();
                 book.Title = title;
@@ -201,31 +210,7 @@ namespace Book_App.Views
 
        
 
-        private void btnUpdateBook_Click(object sender, EventArgs e)
-        {
-                             
-            bunifuPages1.SetPage("detailPage");
-            DataGridViewRow dataGridViewRow = BookGridView.CurrentRow;
-            LoadCategoryUpdateBook(int.Parse(dataGridViewRow.Cells["category_id"].Value.ToString()));
-            bookId =int.Parse( dataGridViewRow.Cells["id"].Value.ToString());
-            txtBookId.Text = bookId.ToString();
-            txtTitle.Text = dataGridViewRow.Cells["title"].Value.ToString();
-            txtPrice.Text = dataGridViewRow.Cells["price"].Value.ToString();
-            txtAuthor.Text = dataGridViewRow.Cells["author"].Value.ToString();
-            txtDescription.Text = dataGridViewRow.Cells["description"].Value.ToString();
-            ratingBook.Value =int.Parse( dataGridViewRow.Cells["rating"].Value.ToString());           
-            imageCoverCurrent = (byte[])dataGridViewRow.Cells["image_cover"].Value;
-            if (imageCoverCurrent != null && imageCoverCurrent.Length > 0)
-            {              
-                using (MemoryStream ms = new MemoryStream(imageCoverCurrent))
-                {
-                    Image image = Image.FromStream(ms);         
-                    ptImageCover.Image = image;
-                    
-                }
-            }
-
-        }
+       
         private void Refresh()
         {
             txtDescription.Text =string.Empty;
@@ -235,7 +220,7 @@ namespace Book_App.Views
             txtBookId.Text = string.Empty;
             ptImageCover.Image =null;
             openFileDialog = null;      
-            CategoryDropDown.SelectedIndex = 0;
+            CategoryDropDown.SelectedIndex = -1;
             imageCoverCurrent = null;
             ratingBook.Value = 5;
             bookId = 0;
@@ -245,22 +230,43 @@ namespace Book_App.Views
         {
             DataGridViewRow row = BookGridView.CurrentRow;
             string id = row.Cells["id"].Value.ToString();
-            try
+            if (id != "")
             {
-                bool result = BookService.Instance.DeleteBook(id);
-                if (result)
+                DialogResult dialog = MessageBox.Show("Do you want delete book with id=" + id, "Delete book", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
                 {
-                    MessageBox.Show("delete successfully!");
-                    LoadBooks();
+                    try
+                    {
+                        bool result = BookService.Instance.DeleteBook(id);
+                        if (result)
+                        {
+                            MessageBox.Show("delete successfully!");
+                            LoadBooks();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-            }catch(Exception ex) {
-                MessageBox.Show(ex.Message);
+                else
+                {
+                    return;
+                }
             }
+           
         }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             Refresh();
         }
+
+        private void CategoryDropDown_Click(object sender, EventArgs e)
+        {
+            LoadData.LoadDropDown("category", CategoryDropDown);
+        }
+
+       
     }
 }

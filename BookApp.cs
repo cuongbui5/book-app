@@ -1,27 +1,13 @@
-﻿using Book_App.Repository;
-using Book_App.Services;
+﻿using Book_App.Services;
 using Book_App.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Book_App.Views;
-using Bunifu.Framework.UI;
-using Bunifu.UI.WinForms;
-using Bunifu.UI.WinForms.BunifuButton;
 
 namespace Book_App
 {
     partial class BookApp : Form
     {
-        
-        private User userDetail;
-   
         private App app;
        
         public BookApp()
@@ -120,7 +106,7 @@ namespace Book_App
                 }
                 else
                 {
-                    MessageBox.Show("Something went wrong!");
+                    MessageBox.Show("Register fail!");
                 }
             }
             catch (Exception ex)
@@ -160,7 +146,7 @@ namespace Book_App
             }
             try
             {
-                userDetail = AuthService.Instance.Login(username, password);
+                 User userDetail = AuthService.Instance.Login(username, password);
                 if (userDetail != null)
                 {
                     
@@ -168,11 +154,7 @@ namespace Book_App
                     app.setUser(userDetail);
                     Cart cart = CartService.Instance.GetCartByUserId(userDetail.Id);
                     app.setCartCurrent(cart);
-                    app.homeControl.Refresh();
                     bunifuPages1.SetPage("mainPage");
-
-
-
 
                 }
 
@@ -184,24 +166,15 @@ namespace Book_App
             }
         }
 
-        
-
-    
-
+       
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            userDetail = null;                    
+                              
             bunifuPages1.SetPage("loginPage");
         }
 
-        private void BookApp_Load(object sender, EventArgs e)
-        {
-          
-        }
+      
 
-        private void bunifuPages1_Selected(object sender, TabControlEventArgs e)
-        {
-            
-        }
+       
     }
 }

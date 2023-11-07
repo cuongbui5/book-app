@@ -1155,7 +1155,7 @@
             animation1.TransparencyCoeff = 1F;
             this.bunifuPages1.Transition = animation1;
             this.bunifuPages1.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Transparent;
-            this.bunifuPages1.Selected += new System.Windows.Forms.TabControlEventHandler(this.bunifuPages1_Selected);
+           
             // 
             // BookApp
             // 
@@ -1168,8 +1168,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "BookApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BookApp";
-            this.Load += new System.EventHandler(this.BookApp_Load);
+            this.Text = "BookApp";    
             this.registerPage.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

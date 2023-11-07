@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookControl));
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -60,57 +60,59 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblAction = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPages1 = new Bunifu.UI.WinForms.BunifuPages();
             this.bookList = new System.Windows.Forms.TabPage();
-            this.btnDeleteBook = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnUpdateBook = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnAddBook = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.BookGridView = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.detailPage = new System.Windows.Forms.TabPage();
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.txtBookId = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.CategoryDropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.ratingBook = new Bunifu.UI.WinForms.BunifuRating();
+            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDeleteBook = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnUpdateBook = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnAddBook = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.txtBookId = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCancel = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnSaveBook = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnUploadImage = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ptImageCover = new System.Windows.Forms.PictureBox();
-            this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.ratingBook = new Bunifu.UI.WinForms.BunifuRating();
-            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtDescription = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtAuthor = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtPrice = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtTitle = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuPages1.SuspendLayout();
             this.bookList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BookGridView)).BeginInit();
             this.detailPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptImageCover)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptImageCover)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuLabel4
+            // lblAction
             // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel4.Location = new System.Drawing.Point(317, 40);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(391, 45);
-            this.bunifuLabel4.TabIndex = 2;
-            this.bunifuLabel4.Text = "Book Management System";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblAction.AllowParentOverrides = false;
+            this.lblAction.AutoEllipsis = false;
+            this.lblAction.BackColor = System.Drawing.Color.White;
+            this.lblAction.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblAction.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblAction.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold);
+            this.lblAction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(66)))), ((int)(((byte)(194)))));
+            this.lblAction.Location = new System.Drawing.Point(409, 38);
+            this.lblAction.Name = "lblAction";
+            this.lblAction.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblAction.Size = new System.Drawing.Size(199, 45);
+            this.lblAction.TabIndex = 2;
+            this.lblAction.Text = "CRUD BOOKS";
+            this.lblAction.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblAction.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuPages1
             // 
@@ -122,10 +124,10 @@
             this.bunifuPages1.Location = new System.Drawing.Point(0, 0);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.bookList;
-            this.bunifuPages1.PageIndex = 0;
-            this.bunifuPages1.PageName = "bookList";
-            this.bunifuPages1.PageTitle = "bookList";
+            this.bunifuPages1.Page = this.detailPage;
+            this.bunifuPages1.PageIndex = 1;
+            this.bunifuPages1.PageName = "detailPage";
+            this.bunifuPages1.PageTitle = "detailPage";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(1016, 606);
             this.bunifuPages1.TabIndex = 3;
@@ -146,7 +148,6 @@
             animation1.TransparencyCoeff = 0F;
             this.bunifuPages1.Transition = animation1;
             this.bunifuPages1.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Leaf;
-            this.bunifuPages1.Selected += new System.Windows.Forms.TabControlEventHandler(this.bunifuPages1_Selected);
             // 
             // bookList
             // 
@@ -162,276 +163,6 @@
             this.bookList.TabIndex = 0;
             this.bookList.Text = "bookList";
             // 
-            // btnDeleteBook
-            // 
-            this.btnDeleteBook.AllowAnimations = true;
-            this.btnDeleteBook.AllowMouseEffects = true;
-            this.btnDeleteBook.AllowToggling = false;
-            this.btnDeleteBook.AnimationSpeed = 200;
-            this.btnDeleteBook.AutoGenerateColors = false;
-            this.btnDeleteBook.AutoRoundBorders = false;
-            this.btnDeleteBook.AutoSizeLeftIcon = true;
-            this.btnDeleteBook.AutoSizeRightIcon = true;
-            this.btnDeleteBook.BackColor = System.Drawing.Color.Transparent;
-            this.btnDeleteBook.BackColor1 = System.Drawing.Color.Red;
-            this.btnDeleteBook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteBook.BackgroundImage")));
-            this.btnDeleteBook.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDeleteBook.ButtonText = "Delete Book";
-            this.btnDeleteBook.ButtonTextMarginLeft = 0;
-            this.btnDeleteBook.ColorContrastOnClick = 45;
-            this.btnDeleteBook.ColorContrastOnHover = 45;
-            this.btnDeleteBook.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnDeleteBook.CustomizableEdges = borderEdges1;
-            this.btnDeleteBook.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDeleteBook.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnDeleteBook.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnDeleteBook.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnDeleteBook.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnDeleteBook.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDeleteBook.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteBook.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteBook.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDeleteBook.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnDeleteBook.IconMarginLeft = 11;
-            this.btnDeleteBook.IconPadding = 10;
-            this.btnDeleteBook.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeleteBook.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnDeleteBook.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnDeleteBook.IconSize = 25;
-            this.btnDeleteBook.IdleBorderColor = System.Drawing.Color.Red;
-            this.btnDeleteBook.IdleBorderRadius = 40;
-            this.btnDeleteBook.IdleBorderThickness = 1;
-            this.btnDeleteBook.IdleFillColor = System.Drawing.Color.Red;
-            this.btnDeleteBook.IdleIconLeftImage = null;
-            this.btnDeleteBook.IdleIconRightImage = null;
-            this.btnDeleteBook.IndicateFocus = false;
-            this.btnDeleteBook.Location = new System.Drawing.Point(852, 213);
-            this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnDeleteBook.OnDisabledState.BorderRadius = 40;
-            this.btnDeleteBook.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDeleteBook.OnDisabledState.BorderThickness = 1;
-            this.btnDeleteBook.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnDeleteBook.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnDeleteBook.OnDisabledState.IconLeftImage = null;
-            this.btnDeleteBook.OnDisabledState.IconRightImage = null;
-            this.btnDeleteBook.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnDeleteBook.onHoverState.BorderRadius = 40;
-            this.btnDeleteBook.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDeleteBook.onHoverState.BorderThickness = 1;
-            this.btnDeleteBook.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnDeleteBook.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteBook.onHoverState.IconLeftImage = null;
-            this.btnDeleteBook.onHoverState.IconRightImage = null;
-            this.btnDeleteBook.OnIdleState.BorderColor = System.Drawing.Color.Red;
-            this.btnDeleteBook.OnIdleState.BorderRadius = 40;
-            this.btnDeleteBook.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDeleteBook.OnIdleState.BorderThickness = 1;
-            this.btnDeleteBook.OnIdleState.FillColor = System.Drawing.Color.Red;
-            this.btnDeleteBook.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteBook.OnIdleState.IconLeftImage = null;
-            this.btnDeleteBook.OnIdleState.IconRightImage = null;
-            this.btnDeleteBook.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnDeleteBook.OnPressedState.BorderRadius = 40;
-            this.btnDeleteBook.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnDeleteBook.OnPressedState.BorderThickness = 1;
-            this.btnDeleteBook.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnDeleteBook.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteBook.OnPressedState.IconLeftImage = null;
-            this.btnDeleteBook.OnPressedState.IconRightImage = null;
-            this.btnDeleteBook.Size = new System.Drawing.Size(150, 39);
-            this.btnDeleteBook.TabIndex = 3;
-            this.btnDeleteBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDeleteBook.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnDeleteBook.TextMarginLeft = 0;
-            this.btnDeleteBook.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnDeleteBook.UseDefaultRadiusAndThickness = true;
-            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
-            // 
-            // btnUpdateBook
-            // 
-            this.btnUpdateBook.AllowAnimations = true;
-            this.btnUpdateBook.AllowMouseEffects = true;
-            this.btnUpdateBook.AllowToggling = false;
-            this.btnUpdateBook.AnimationSpeed = 200;
-            this.btnUpdateBook.AutoGenerateColors = false;
-            this.btnUpdateBook.AutoRoundBorders = false;
-            this.btnUpdateBook.AutoSizeLeftIcon = true;
-            this.btnUpdateBook.AutoSizeRightIcon = true;
-            this.btnUpdateBook.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdateBook.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateBook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateBook.BackgroundImage")));
-            this.btnUpdateBook.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnUpdateBook.ButtonText = "Update Book";
-            this.btnUpdateBook.ButtonTextMarginLeft = 0;
-            this.btnUpdateBook.ColorContrastOnClick = 45;
-            this.btnUpdateBook.ColorContrastOnHover = 45;
-            this.btnUpdateBook.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnUpdateBook.CustomizableEdges = borderEdges2;
-            this.btnUpdateBook.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnUpdateBook.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnUpdateBook.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnUpdateBook.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnUpdateBook.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnUpdateBook.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUpdateBook.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateBook.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateBook.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnUpdateBook.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnUpdateBook.IconMarginLeft = 11;
-            this.btnUpdateBook.IconPadding = 10;
-            this.btnUpdateBook.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdateBook.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnUpdateBook.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnUpdateBook.IconSize = 25;
-            this.btnUpdateBook.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateBook.IdleBorderRadius = 40;
-            this.btnUpdateBook.IdleBorderThickness = 1;
-            this.btnUpdateBook.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateBook.IdleIconLeftImage = null;
-            this.btnUpdateBook.IdleIconRightImage = null;
-            this.btnUpdateBook.IndicateFocus = false;
-            this.btnUpdateBook.Location = new System.Drawing.Point(852, 168);
-            this.btnUpdateBook.Name = "btnUpdateBook";
-            this.btnUpdateBook.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnUpdateBook.OnDisabledState.BorderRadius = 40;
-            this.btnUpdateBook.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnUpdateBook.OnDisabledState.BorderThickness = 1;
-            this.btnUpdateBook.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnUpdateBook.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnUpdateBook.OnDisabledState.IconLeftImage = null;
-            this.btnUpdateBook.OnDisabledState.IconRightImage = null;
-            this.btnUpdateBook.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnUpdateBook.onHoverState.BorderRadius = 40;
-            this.btnUpdateBook.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnUpdateBook.onHoverState.BorderThickness = 1;
-            this.btnUpdateBook.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnUpdateBook.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateBook.onHoverState.IconLeftImage = null;
-            this.btnUpdateBook.onHoverState.IconRightImage = null;
-            this.btnUpdateBook.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateBook.OnIdleState.BorderRadius = 40;
-            this.btnUpdateBook.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnUpdateBook.OnIdleState.BorderThickness = 1;
-            this.btnUpdateBook.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateBook.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateBook.OnIdleState.IconLeftImage = null;
-            this.btnUpdateBook.OnIdleState.IconRightImage = null;
-            this.btnUpdateBook.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnUpdateBook.OnPressedState.BorderRadius = 40;
-            this.btnUpdateBook.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnUpdateBook.OnPressedState.BorderThickness = 1;
-            this.btnUpdateBook.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnUpdateBook.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateBook.OnPressedState.IconLeftImage = null;
-            this.btnUpdateBook.OnPressedState.IconRightImage = null;
-            this.btnUpdateBook.Size = new System.Drawing.Size(150, 39);
-            this.btnUpdateBook.TabIndex = 2;
-            this.btnUpdateBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnUpdateBook.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnUpdateBook.TextMarginLeft = 0;
-            this.btnUpdateBook.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnUpdateBook.UseDefaultRadiusAndThickness = true;
-            this.btnUpdateBook.Click += new System.EventHandler(this.btnUpdateBook_Click);
-            // 
-            // btnAddBook
-            // 
-            this.btnAddBook.AllowAnimations = true;
-            this.btnAddBook.AllowMouseEffects = true;
-            this.btnAddBook.AllowToggling = false;
-            this.btnAddBook.AnimationSpeed = 200;
-            this.btnAddBook.AutoGenerateColors = false;
-            this.btnAddBook.AutoRoundBorders = false;
-            this.btnAddBook.AutoSizeLeftIcon = true;
-            this.btnAddBook.AutoSizeRightIcon = true;
-            this.btnAddBook.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddBook.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAddBook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddBook.BackgroundImage")));
-            this.btnAddBook.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddBook.ButtonText = "Add Book";
-            this.btnAddBook.ButtonTextMarginLeft = 0;
-            this.btnAddBook.ColorContrastOnClick = 45;
-            this.btnAddBook.ColorContrastOnHover = 45;
-            this.btnAddBook.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnAddBook.CustomizableEdges = borderEdges3;
-            this.btnAddBook.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAddBook.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAddBook.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAddBook.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAddBook.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnAddBook.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddBook.ForeColor = System.Drawing.Color.White;
-            this.btnAddBook.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddBook.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddBook.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnAddBook.IconMarginLeft = 11;
-            this.btnAddBook.IconPadding = 10;
-            this.btnAddBook.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddBook.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddBook.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnAddBook.IconSize = 25;
-            this.btnAddBook.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAddBook.IdleBorderRadius = 40;
-            this.btnAddBook.IdleBorderThickness = 1;
-            this.btnAddBook.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAddBook.IdleIconLeftImage = null;
-            this.btnAddBook.IdleIconRightImage = null;
-            this.btnAddBook.IndicateFocus = false;
-            this.btnAddBook.Location = new System.Drawing.Point(852, 123);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAddBook.OnDisabledState.BorderRadius = 40;
-            this.btnAddBook.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddBook.OnDisabledState.BorderThickness = 1;
-            this.btnAddBook.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAddBook.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAddBook.OnDisabledState.IconLeftImage = null;
-            this.btnAddBook.OnDisabledState.IconRightImage = null;
-            this.btnAddBook.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnAddBook.onHoverState.BorderRadius = 40;
-            this.btnAddBook.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddBook.onHoverState.BorderThickness = 1;
-            this.btnAddBook.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnAddBook.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAddBook.onHoverState.IconLeftImage = null;
-            this.btnAddBook.onHoverState.IconRightImage = null;
-            this.btnAddBook.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAddBook.OnIdleState.BorderRadius = 40;
-            this.btnAddBook.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddBook.OnIdleState.BorderThickness = 1;
-            this.btnAddBook.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAddBook.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAddBook.OnIdleState.IconLeftImage = null;
-            this.btnAddBook.OnIdleState.IconRightImage = null;
-            this.btnAddBook.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAddBook.OnPressedState.BorderRadius = 40;
-            this.btnAddBook.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAddBook.OnPressedState.BorderThickness = 1;
-            this.btnAddBook.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAddBook.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnAddBook.OnPressedState.IconLeftImage = null;
-            this.btnAddBook.OnPressedState.IconRightImage = null;
-            this.btnAddBook.Size = new System.Drawing.Size(150, 39);
-            this.btnAddBook.TabIndex = 1;
-            this.btnAddBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddBook.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnAddBook.TextMarginLeft = 0;
-            this.btnAddBook.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnAddBook.UseDefaultRadiusAndThickness = true;
-            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
-            // 
             // BookGridView
             // 
             this.BookGridView.AllowCustomTheming = false;
@@ -442,8 +173,8 @@
             this.BookGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.BookGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.BookGridView.BackgroundColor = System.Drawing.Color.White;
-            this.BookGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.BookGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.BookGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BookGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.BookGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
@@ -485,13 +216,13 @@
             this.BookGridView.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.BookGridView.HeaderBgColor = System.Drawing.Color.Empty;
             this.BookGridView.HeaderForeColor = System.Drawing.Color.White;
-            this.BookGridView.Location = new System.Drawing.Point(6, 123);
+            this.BookGridView.Location = new System.Drawing.Point(39, 123);
             this.BookGridView.Name = "BookGridView";
             this.BookGridView.ReadOnly = true;
             this.BookGridView.RowHeadersVisible = false;
             this.BookGridView.RowTemplate.Height = 40;
             this.BookGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BookGridView.Size = new System.Drawing.Size(840, 451);
+            this.BookGridView.Size = new System.Drawing.Size(766, 384);
             this.BookGridView.TabIndex = 0;
             this.BookGridView.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -499,23 +230,23 @@
             // 
             this.detailPage.BackColor = System.Drawing.Color.White;
             this.detailPage.Controls.Add(this.bunifuLabel8);
-            this.detailPage.Controls.Add(this.txtBookId);
-            this.detailPage.Controls.Add(this.bunifuButton1);
             this.detailPage.Controls.Add(this.CategoryDropDown);
             this.detailPage.Controls.Add(this.bunifuLabel7);
+            this.detailPage.Controls.Add(this.bunifuLabel6);
+            this.detailPage.Controls.Add(this.ratingBook);
+            this.detailPage.Controls.Add(this.bunifuLabel5);
+            this.detailPage.Controls.Add(this.bunifuLabel3);
+            this.detailPage.Controls.Add(this.bunifuLabel2);
+            this.detailPage.Controls.Add(this.bunifuLabel1);
+            this.detailPage.Controls.Add(this.txtBookId);
+            this.detailPage.Controls.Add(this.bunifuButton1);
             this.detailPage.Controls.Add(this.btnCancel);
             this.detailPage.Controls.Add(this.btnSaveBook);
             this.detailPage.Controls.Add(this.btnUploadImage);
             this.detailPage.Controls.Add(this.ptImageCover);
-            this.detailPage.Controls.Add(this.bunifuLabel6);
-            this.detailPage.Controls.Add(this.ratingBook);
-            this.detailPage.Controls.Add(this.bunifuLabel5);
             this.detailPage.Controls.Add(this.txtDescription);
-            this.detailPage.Controls.Add(this.bunifuLabel3);
             this.detailPage.Controls.Add(this.txtAuthor);
-            this.detailPage.Controls.Add(this.bunifuLabel2);
             this.detailPage.Controls.Add(this.txtPrice);
-            this.detailPage.Controls.Add(this.bunifuLabel1);
             this.detailPage.Controls.Add(this.txtTitle);
             this.detailPage.Location = new System.Drawing.Point(4, 4);
             this.detailPage.Name = "detailPage";
@@ -539,6 +270,442 @@
             this.bunifuLabel8.Text = "Id:";
             this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // CategoryDropDown
+            // 
+            this.CategoryDropDown.BackColor = System.Drawing.Color.Transparent;
+            this.CategoryDropDown.BackgroundColor = System.Drawing.Color.White;
+            this.CategoryDropDown.BorderColor = System.Drawing.Color.Silver;
+            this.CategoryDropDown.BorderRadius = 1;
+            this.CategoryDropDown.Color = System.Drawing.Color.Silver;
+            this.CategoryDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.CategoryDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.CategoryDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.CategoryDropDown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.CategoryDropDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.CategoryDropDown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.CategoryDropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CategoryDropDown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.CategoryDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CategoryDropDown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.CategoryDropDown.FillDropDown = true;
+            this.CategoryDropDown.FillIndicator = false;
+            this.CategoryDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CategoryDropDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CategoryDropDown.ForeColor = System.Drawing.Color.Black;
+            this.CategoryDropDown.FormattingEnabled = true;
+            this.CategoryDropDown.Icon = null;
+            this.CategoryDropDown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.CategoryDropDown.IndicatorColor = System.Drawing.Color.Gray;
+            this.CategoryDropDown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.CategoryDropDown.ItemBackColor = System.Drawing.Color.White;
+            this.CategoryDropDown.ItemBorderColor = System.Drawing.Color.White;
+            this.CategoryDropDown.ItemForeColor = System.Drawing.Color.Black;
+            this.CategoryDropDown.ItemHeight = 26;
+            this.CategoryDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.CategoryDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.CategoryDropDown.ItemTopMargin = 3;
+            this.CategoryDropDown.Location = new System.Drawing.Point(579, 182);
+            this.CategoryDropDown.Name = "CategoryDropDown";
+            this.CategoryDropDown.Size = new System.Drawing.Size(195, 32);
+            this.CategoryDropDown.TabIndex = 15;
+            this.CategoryDropDown.Text = null;
+            this.CategoryDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.CategoryDropDown.TextLeftMargin = 5;
+            this.CategoryDropDown.Click += new System.EventHandler(this.CategoryDropDown_Click);
+            // 
+            // bunifuLabel7
+            // 
+            this.bunifuLabel7.AllowParentOverrides = false;
+            this.bunifuLabel7.AutoEllipsis = false;
+            this.bunifuLabel7.CursorType = null;
+            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel7.Location = new System.Drawing.Point(579, 155);
+            this.bunifuLabel7.Name = "bunifuLabel7";
+            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel7.Size = new System.Drawing.Size(66, 20);
+            this.bunifuLabel7.TabIndex = 14;
+            this.bunifuLabel7.Text = "Category:";
+            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel6
+            // 
+            this.bunifuLabel6.AllowParentOverrides = false;
+            this.bunifuLabel6.AutoEllipsis = false;
+            this.bunifuLabel6.CursorType = null;
+            this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel6.Location = new System.Drawing.Point(579, 235);
+            this.bunifuLabel6.Name = "bunifuLabel6";
+            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel6.Size = new System.Drawing.Size(48, 20);
+            this.bunifuLabel6.TabIndex = 9;
+            this.bunifuLabel6.Text = "Rating:";
+            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // ratingBook
+            // 
+            this.ratingBook.BackColor = System.Drawing.Color.Transparent;
+            this.ratingBook.DisabledEmptyFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.ratingBook.DisabledRatedFillColor = System.Drawing.Color.DarkGray;
+            this.ratingBook.EmptyBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.ratingBook.EmptyFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.ratingBook.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
+            this.ratingBook.HoverFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
+            this.ratingBook.InnerRadius = 2F;
+            this.ratingBook.Location = new System.Drawing.Point(639, 235);
+            this.ratingBook.Name = "ratingBook";
+            this.ratingBook.OuterRadius = 10F;
+            this.ratingBook.RatedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
+            this.ratingBook.RatedFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
+            this.ratingBook.ReadOnly = false;
+            this.ratingBook.RightClickToClear = true;
+            this.ratingBook.Size = new System.Drawing.Size(121, 22);
+            this.ratingBook.TabIndex = 8;
+            this.ratingBook.Text = "bunifuRating1";
+            this.ratingBook.Value = 5;
+            // 
+            // bunifuLabel5
+            // 
+            this.bunifuLabel5.AllowParentOverrides = false;
+            this.bunifuLabel5.AutoEllipsis = false;
+            this.bunifuLabel5.CursorType = null;
+            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel5.Location = new System.Drawing.Point(41, 361);
+            this.bunifuLabel5.Name = "bunifuLabel5";
+            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel5.Size = new System.Drawing.Size(82, 20);
+            this.bunifuLabel5.TabIndex = 7;
+            this.bunifuLabel5.Text = "Description:";
+            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.CursorType = null;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel3.Location = new System.Drawing.Point(41, 293);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(52, 20);
+            this.bunifuLabel3.TabIndex = 5;
+            this.bunifuLabel3.Text = "Author:";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel2.Location = new System.Drawing.Point(341, 153);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(38, 20);
+            this.bunifuLabel2.TabIndex = 3;
+            this.bunifuLabel2.Text = "Price:";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel1.Location = new System.Drawing.Point(41, 223);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(33, 20);
+            this.bunifuLabel1.TabIndex = 1;
+            this.bunifuLabel1.Text = "Title:";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblAction);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1016, 121);
+            this.panel1.TabIndex = 4;
+            // 
+            // btnDeleteBook
+            // 
+            this.btnDeleteBook.AllowAnimations = true;
+            this.btnDeleteBook.AllowMouseEffects = true;
+            this.btnDeleteBook.AllowToggling = false;
+            this.btnDeleteBook.AnimationSpeed = 200;
+            this.btnDeleteBook.AutoGenerateColors = false;
+            this.btnDeleteBook.AutoRoundBorders = false;
+            this.btnDeleteBook.AutoSizeLeftIcon = true;
+            this.btnDeleteBook.AutoSizeRightIcon = true;
+            this.btnDeleteBook.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteBook.BackColor1 = System.Drawing.Color.Red;
+            this.btnDeleteBook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteBook.BackgroundImage")));
+            this.btnDeleteBook.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDeleteBook.ButtonText = "Delete";
+            this.btnDeleteBook.ButtonTextMarginLeft = 0;
+            this.btnDeleteBook.ColorContrastOnClick = 45;
+            this.btnDeleteBook.ColorContrastOnHover = 45;
+            this.btnDeleteBook.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnDeleteBook.CustomizableEdges = borderEdges1;
+            this.btnDeleteBook.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDeleteBook.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnDeleteBook.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnDeleteBook.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnDeleteBook.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnDeleteBook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteBook.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteBook.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteBook.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDeleteBook.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnDeleteBook.IconMarginLeft = 11;
+            this.btnDeleteBook.IconPadding = 10;
+            this.btnDeleteBook.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteBook.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDeleteBook.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnDeleteBook.IconSize = 25;
+            this.btnDeleteBook.IdleBorderColor = System.Drawing.Color.Red;
+            this.btnDeleteBook.IdleBorderRadius = 20;
+            this.btnDeleteBook.IdleBorderThickness = 1;
+            this.btnDeleteBook.IdleFillColor = System.Drawing.Color.Red;
+            this.btnDeleteBook.IdleIconLeftImage = global::Book_App.Properties.Resources.delete__1_;
+            this.btnDeleteBook.IdleIconRightImage = null;
+            this.btnDeleteBook.IndicateFocus = false;
+            this.btnDeleteBook.Location = new System.Drawing.Point(824, 213);
+            this.btnDeleteBook.Name = "btnDeleteBook";
+            this.btnDeleteBook.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnDeleteBook.OnDisabledState.BorderRadius = 20;
+            this.btnDeleteBook.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDeleteBook.OnDisabledState.BorderThickness = 1;
+            this.btnDeleteBook.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnDeleteBook.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnDeleteBook.OnDisabledState.IconLeftImage = null;
+            this.btnDeleteBook.OnDisabledState.IconRightImage = null;
+            this.btnDeleteBook.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnDeleteBook.onHoverState.BorderRadius = 20;
+            this.btnDeleteBook.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDeleteBook.onHoverState.BorderThickness = 1;
+            this.btnDeleteBook.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnDeleteBook.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteBook.onHoverState.IconLeftImage = null;
+            this.btnDeleteBook.onHoverState.IconRightImage = null;
+            this.btnDeleteBook.OnIdleState.BorderColor = System.Drawing.Color.Red;
+            this.btnDeleteBook.OnIdleState.BorderRadius = 20;
+            this.btnDeleteBook.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDeleteBook.OnIdleState.BorderThickness = 1;
+            this.btnDeleteBook.OnIdleState.FillColor = System.Drawing.Color.Red;
+            this.btnDeleteBook.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteBook.OnIdleState.IconLeftImage = global::Book_App.Properties.Resources.delete__1_;
+            this.btnDeleteBook.OnIdleState.IconRightImage = null;
+            this.btnDeleteBook.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnDeleteBook.OnPressedState.BorderRadius = 20;
+            this.btnDeleteBook.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnDeleteBook.OnPressedState.BorderThickness = 1;
+            this.btnDeleteBook.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnDeleteBook.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteBook.OnPressedState.IconLeftImage = null;
+            this.btnDeleteBook.OnPressedState.IconRightImage = null;
+            this.btnDeleteBook.Size = new System.Drawing.Size(150, 39);
+            this.btnDeleteBook.TabIndex = 3;
+            this.btnDeleteBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDeleteBook.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDeleteBook.TextMarginLeft = 0;
+            this.btnDeleteBook.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnDeleteBook.UseDefaultRadiusAndThickness = true;
+            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
+            // 
+            // btnUpdateBook
+            // 
+            this.btnUpdateBook.AllowAnimations = true;
+            this.btnUpdateBook.AllowMouseEffects = true;
+            this.btnUpdateBook.AllowToggling = false;
+            this.btnUpdateBook.AnimationSpeed = 200;
+            this.btnUpdateBook.AutoGenerateColors = false;
+            this.btnUpdateBook.AutoRoundBorders = false;
+            this.btnUpdateBook.AutoSizeLeftIcon = true;
+            this.btnUpdateBook.AutoSizeRightIcon = true;
+            this.btnUpdateBook.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdateBook.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnUpdateBook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateBook.BackgroundImage")));
+            this.btnUpdateBook.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnUpdateBook.ButtonText = "Update";
+            this.btnUpdateBook.ButtonTextMarginLeft = 0;
+            this.btnUpdateBook.ColorContrastOnClick = 45;
+            this.btnUpdateBook.ColorContrastOnHover = 45;
+            this.btnUpdateBook.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnUpdateBook.CustomizableEdges = borderEdges2;
+            this.btnUpdateBook.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnUpdateBook.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnUpdateBook.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnUpdateBook.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnUpdateBook.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnUpdateBook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateBook.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateBook.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateBook.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnUpdateBook.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnUpdateBook.IconMarginLeft = 11;
+            this.btnUpdateBook.IconPadding = 10;
+            this.btnUpdateBook.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdateBook.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnUpdateBook.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnUpdateBook.IconSize = 25;
+            this.btnUpdateBook.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdateBook.IdleBorderRadius = 20;
+            this.btnUpdateBook.IdleBorderThickness = 1;
+            this.btnUpdateBook.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdateBook.IdleIconLeftImage = global::Book_App.Properties.Resources.pen;
+            this.btnUpdateBook.IdleIconRightImage = null;
+            this.btnUpdateBook.IndicateFocus = false;
+            this.btnUpdateBook.Location = new System.Drawing.Point(824, 168);
+            this.btnUpdateBook.Name = "btnUpdateBook";
+            this.btnUpdateBook.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnUpdateBook.OnDisabledState.BorderRadius = 20;
+            this.btnUpdateBook.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnUpdateBook.OnDisabledState.BorderThickness = 1;
+            this.btnUpdateBook.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnUpdateBook.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnUpdateBook.OnDisabledState.IconLeftImage = null;
+            this.btnUpdateBook.OnDisabledState.IconRightImage = null;
+            this.btnUpdateBook.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnUpdateBook.onHoverState.BorderRadius = 20;
+            this.btnUpdateBook.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnUpdateBook.onHoverState.BorderThickness = 1;
+            this.btnUpdateBook.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnUpdateBook.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateBook.onHoverState.IconLeftImage = null;
+            this.btnUpdateBook.onHoverState.IconRightImage = null;
+            this.btnUpdateBook.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdateBook.OnIdleState.BorderRadius = 20;
+            this.btnUpdateBook.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnUpdateBook.OnIdleState.BorderThickness = 1;
+            this.btnUpdateBook.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnUpdateBook.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateBook.OnIdleState.IconLeftImage = global::Book_App.Properties.Resources.pen;
+            this.btnUpdateBook.OnIdleState.IconRightImage = null;
+            this.btnUpdateBook.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnUpdateBook.OnPressedState.BorderRadius = 20;
+            this.btnUpdateBook.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnUpdateBook.OnPressedState.BorderThickness = 1;
+            this.btnUpdateBook.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnUpdateBook.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateBook.OnPressedState.IconLeftImage = null;
+            this.btnUpdateBook.OnPressedState.IconRightImage = null;
+            this.btnUpdateBook.Size = new System.Drawing.Size(150, 39);
+            this.btnUpdateBook.TabIndex = 2;
+            this.btnUpdateBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUpdateBook.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnUpdateBook.TextMarginLeft = 0;
+            this.btnUpdateBook.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnUpdateBook.UseDefaultRadiusAndThickness = true;
+            this.btnUpdateBook.Click += new System.EventHandler(this.btnUpdateBook_Click);
+            // 
+            // btnAddBook
+            // 
+            this.btnAddBook.AllowAnimations = true;
+            this.btnAddBook.AllowMouseEffects = true;
+            this.btnAddBook.AllowToggling = false;
+            this.btnAddBook.AnimationSpeed = 200;
+            this.btnAddBook.AutoGenerateColors = false;
+            this.btnAddBook.AutoRoundBorders = false;
+            this.btnAddBook.AutoSizeLeftIcon = true;
+            this.btnAddBook.AutoSizeRightIcon = true;
+            this.btnAddBook.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddBook.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddBook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddBook.BackgroundImage")));
+            this.btnAddBook.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddBook.ButtonText = "Create Book";
+            this.btnAddBook.ButtonTextMarginLeft = 0;
+            this.btnAddBook.ColorContrastOnClick = 45;
+            this.btnAddBook.ColorContrastOnHover = 45;
+            this.btnAddBook.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnAddBook.CustomizableEdges = borderEdges3;
+            this.btnAddBook.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAddBook.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAddBook.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAddBook.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAddBook.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnAddBook.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddBook.ForeColor = System.Drawing.Color.White;
+            this.btnAddBook.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddBook.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAddBook.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnAddBook.IconMarginLeft = 11;
+            this.btnAddBook.IconPadding = 10;
+            this.btnAddBook.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddBook.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAddBook.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnAddBook.IconSize = 25;
+            this.btnAddBook.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddBook.IdleBorderRadius = 20;
+            this.btnAddBook.IdleBorderThickness = 1;
+            this.btnAddBook.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddBook.IdleIconLeftImage = global::Book_App.Properties.Resources.plus__1_;
+            this.btnAddBook.IdleIconRightImage = null;
+            this.btnAddBook.IndicateFocus = false;
+            this.btnAddBook.Location = new System.Drawing.Point(824, 123);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAddBook.OnDisabledState.BorderRadius = 20;
+            this.btnAddBook.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddBook.OnDisabledState.BorderThickness = 1;
+            this.btnAddBook.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAddBook.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAddBook.OnDisabledState.IconLeftImage = null;
+            this.btnAddBook.OnDisabledState.IconRightImage = null;
+            this.btnAddBook.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnAddBook.onHoverState.BorderRadius = 20;
+            this.btnAddBook.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddBook.onHoverState.BorderThickness = 1;
+            this.btnAddBook.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnAddBook.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAddBook.onHoverState.IconLeftImage = null;
+            this.btnAddBook.onHoverState.IconRightImage = null;
+            this.btnAddBook.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddBook.OnIdleState.BorderRadius = 20;
+            this.btnAddBook.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddBook.OnIdleState.BorderThickness = 1;
+            this.btnAddBook.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddBook.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnAddBook.OnIdleState.IconLeftImage = global::Book_App.Properties.Resources.plus__1_;
+            this.btnAddBook.OnIdleState.IconRightImage = null;
+            this.btnAddBook.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAddBook.OnPressedState.BorderRadius = 20;
+            this.btnAddBook.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAddBook.OnPressedState.BorderThickness = 1;
+            this.btnAddBook.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAddBook.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnAddBook.OnPressedState.IconLeftImage = null;
+            this.btnAddBook.OnPressedState.IconRightImage = null;
+            this.btnAddBook.Size = new System.Drawing.Size(150, 39);
+            this.btnAddBook.TabIndex = 1;
+            this.btnAddBook.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddBook.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAddBook.TextMarginLeft = 0;
+            this.btnAddBook.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnAddBook.UseDefaultRadiusAndThickness = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // txtBookId
             // 
@@ -625,10 +792,10 @@
             this.bunifuButton1.AutoSizeLeftIcon = true;
             this.bunifuButton1.AutoSizeRightIcon = true;
             this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton1.BackColor1 = System.Drawing.Color.DarkTurquoise;
             this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
             this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.ButtonText = "Refresh";
+            this.bunifuButton1.ButtonText = "";
             this.bunifuButton1.ButtonTextMarginLeft = 0;
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
@@ -654,17 +821,17 @@
             this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.bunifuButton1.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.bunifuButton1.IconSize = 25;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton1.IdleBorderRadius = 1;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.DarkTurquoise;
+            this.bunifuButton1.IdleBorderRadius = 40;
             this.bunifuButton1.IdleBorderThickness = 1;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton1.IdleIconLeftImage = null;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.DarkTurquoise;
+            this.bunifuButton1.IdleIconLeftImage = global::Book_App.Properties.Resources.refresh;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(788, 180);
+            this.bunifuButton1.Location = new System.Drawing.Point(816, 174);
             this.bunifuButton1.Name = "bunifuButton1";
             this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton1.OnDisabledState.BorderRadius = 1;
+            this.bunifuButton1.OnDisabledState.BorderRadius = 40;
             this.bunifuButton1.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton1.OnDisabledState.BorderThickness = 1;
             this.bunifuButton1.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -672,30 +839,30 @@
             this.bunifuButton1.OnDisabledState.IconLeftImage = null;
             this.bunifuButton1.OnDisabledState.IconRightImage = null;
             this.bunifuButton1.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuButton1.onHoverState.BorderRadius = 1;
+            this.bunifuButton1.onHoverState.BorderRadius = 40;
             this.bunifuButton1.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton1.onHoverState.BorderThickness = 1;
             this.bunifuButton1.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.bunifuButton1.onHoverState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton1.onHoverState.IconLeftImage = null;
             this.bunifuButton1.onHoverState.IconRightImage = null;
-            this.bunifuButton1.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton1.OnIdleState.BorderRadius = 1;
+            this.bunifuButton1.OnIdleState.BorderColor = System.Drawing.Color.DarkTurquoise;
+            this.bunifuButton1.OnIdleState.BorderRadius = 40;
             this.bunifuButton1.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton1.OnIdleState.BorderThickness = 1;
-            this.bunifuButton1.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuButton1.OnIdleState.FillColor = System.Drawing.Color.DarkTurquoise;
             this.bunifuButton1.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.OnIdleState.IconLeftImage = null;
+            this.bunifuButton1.OnIdleState.IconLeftImage = global::Book_App.Properties.Resources.refresh;
             this.bunifuButton1.OnIdleState.IconRightImage = null;
             this.bunifuButton1.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuButton1.OnPressedState.BorderRadius = 1;
+            this.bunifuButton1.OnPressedState.BorderRadius = 40;
             this.bunifuButton1.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.bunifuButton1.OnPressedState.BorderThickness = 1;
             this.bunifuButton1.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.bunifuButton1.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton1.OnPressedState.IconLeftImage = null;
             this.bunifuButton1.OnPressedState.IconRightImage = null;
-            this.bunifuButton1.Size = new System.Drawing.Size(124, 33);
+            this.bunifuButton1.Size = new System.Drawing.Size(40, 40);
             this.bunifuButton1.TabIndex = 16;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -703,63 +870,6 @@
             this.bunifuButton1.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
             this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
-            // 
-            // CategoryDropDown
-            // 
-            this.CategoryDropDown.BackColor = System.Drawing.Color.Transparent;
-            this.CategoryDropDown.BackgroundColor = System.Drawing.Color.White;
-            this.CategoryDropDown.BorderColor = System.Drawing.Color.Silver;
-            this.CategoryDropDown.BorderRadius = 1;
-            this.CategoryDropDown.Color = System.Drawing.Color.Silver;
-            this.CategoryDropDown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.CategoryDropDown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.CategoryDropDown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.CategoryDropDown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.CategoryDropDown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.CategoryDropDown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.CategoryDropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CategoryDropDown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.CategoryDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CategoryDropDown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.CategoryDropDown.FillDropDown = true;
-            this.CategoryDropDown.FillIndicator = false;
-            this.CategoryDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CategoryDropDown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.CategoryDropDown.ForeColor = System.Drawing.Color.Black;
-            this.CategoryDropDown.FormattingEnabled = true;
-            this.CategoryDropDown.Icon = null;
-            this.CategoryDropDown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.CategoryDropDown.IndicatorColor = System.Drawing.Color.Gray;
-            this.CategoryDropDown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.CategoryDropDown.ItemBackColor = System.Drawing.Color.White;
-            this.CategoryDropDown.ItemBorderColor = System.Drawing.Color.White;
-            this.CategoryDropDown.ItemForeColor = System.Drawing.Color.Black;
-            this.CategoryDropDown.ItemHeight = 26;
-            this.CategoryDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.CategoryDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.CategoryDropDown.ItemTopMargin = 3;
-            this.CategoryDropDown.Location = new System.Drawing.Point(553, 180);
-            this.CategoryDropDown.Name = "CategoryDropDown";
-            this.CategoryDropDown.Size = new System.Drawing.Size(195, 32);
-            this.CategoryDropDown.TabIndex = 15;
-            this.CategoryDropDown.Text = null;
-            this.CategoryDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.CategoryDropDown.TextLeftMargin = 5;
-            // 
-            // bunifuLabel7
-            // 
-            this.bunifuLabel7.AllowParentOverrides = false;
-            this.bunifuLabel7.AutoEllipsis = false;
-            this.bunifuLabel7.CursorType = null;
-            this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel7.Location = new System.Drawing.Point(553, 153);
-            this.bunifuLabel7.Name = "bunifuLabel7";
-            this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel7.Size = new System.Drawing.Size(66, 20);
-            this.bunifuLabel7.TabIndex = 14;
-            this.bunifuLabel7.Text = "Category:";
-            this.bunifuLabel7.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel7.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btnCancel
             // 
@@ -790,7 +900,7 @@
             this.btnCancel.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnCancel.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnCancel.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -802,16 +912,16 @@
             this.btnCancel.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnCancel.IconSize = 25;
             this.btnCancel.IdleBorderColor = System.Drawing.Color.Red;
-            this.btnCancel.IdleBorderRadius = 1;
+            this.btnCancel.IdleBorderRadius = 7;
             this.btnCancel.IdleBorderThickness = 1;
             this.btnCancel.IdleFillColor = System.Drawing.Color.Red;
-            this.btnCancel.IdleIconLeftImage = null;
+            this.btnCancel.IdleIconLeftImage = global::Book_App.Properties.Resources.cancel;
             this.btnCancel.IdleIconRightImage = null;
             this.btnCancel.IndicateFocus = false;
             this.btnCancel.Location = new System.Drawing.Point(771, 529);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnCancel.OnDisabledState.BorderRadius = 1;
+            this.btnCancel.OnDisabledState.BorderRadius = 7;
             this.btnCancel.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnCancel.OnDisabledState.BorderThickness = 1;
             this.btnCancel.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -819,7 +929,7 @@
             this.btnCancel.OnDisabledState.IconLeftImage = null;
             this.btnCancel.OnDisabledState.IconRightImage = null;
             this.btnCancel.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnCancel.onHoverState.BorderRadius = 1;
+            this.btnCancel.onHoverState.BorderRadius = 7;
             this.btnCancel.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnCancel.onHoverState.BorderThickness = 1;
             this.btnCancel.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -827,15 +937,15 @@
             this.btnCancel.onHoverState.IconLeftImage = null;
             this.btnCancel.onHoverState.IconRightImage = null;
             this.btnCancel.OnIdleState.BorderColor = System.Drawing.Color.Red;
-            this.btnCancel.OnIdleState.BorderRadius = 1;
+            this.btnCancel.OnIdleState.BorderRadius = 7;
             this.btnCancel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnCancel.OnIdleState.BorderThickness = 1;
             this.btnCancel.OnIdleState.FillColor = System.Drawing.Color.Red;
             this.btnCancel.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.OnIdleState.IconLeftImage = null;
+            this.btnCancel.OnIdleState.IconLeftImage = global::Book_App.Properties.Resources.cancel;
             this.btnCancel.OnIdleState.IconRightImage = null;
             this.btnCancel.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnCancel.OnPressedState.BorderRadius = 1;
+            this.btnCancel.OnPressedState.BorderRadius = 7;
             this.btnCancel.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnCancel.OnPressedState.BorderThickness = 1;
             this.btnCancel.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -865,7 +975,7 @@
             this.btnSaveBook.BackColor1 = System.Drawing.Color.DodgerBlue;
             this.btnSaveBook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveBook.BackgroundImage")));
             this.btnSaveBook.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSaveBook.ButtonText = "Save Book";
+            this.btnSaveBook.ButtonText = "Save ";
             this.btnSaveBook.ButtonTextMarginLeft = 0;
             this.btnSaveBook.ColorContrastOnClick = 45;
             this.btnSaveBook.ColorContrastOnHover = 45;
@@ -880,7 +990,7 @@
             this.btnSaveBook.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnSaveBook.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnSaveBook.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnSaveBook.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSaveBook.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveBook.ForeColor = System.Drawing.Color.White;
             this.btnSaveBook.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaveBook.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -892,16 +1002,16 @@
             this.btnSaveBook.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnSaveBook.IconSize = 25;
             this.btnSaveBook.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnSaveBook.IdleBorderRadius = 1;
+            this.btnSaveBook.IdleBorderRadius = 7;
             this.btnSaveBook.IdleBorderThickness = 1;
             this.btnSaveBook.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnSaveBook.IdleIconLeftImage = null;
+            this.btnSaveBook.IdleIconLeftImage = global::Book_App.Properties.Resources.data_storage;
             this.btnSaveBook.IdleIconRightImage = null;
             this.btnSaveBook.IndicateFocus = false;
             this.btnSaveBook.Location = new System.Drawing.Point(579, 529);
             this.btnSaveBook.Name = "btnSaveBook";
             this.btnSaveBook.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnSaveBook.OnDisabledState.BorderRadius = 1;
+            this.btnSaveBook.OnDisabledState.BorderRadius = 7;
             this.btnSaveBook.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnSaveBook.OnDisabledState.BorderThickness = 1;
             this.btnSaveBook.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -909,7 +1019,7 @@
             this.btnSaveBook.OnDisabledState.IconLeftImage = null;
             this.btnSaveBook.OnDisabledState.IconRightImage = null;
             this.btnSaveBook.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnSaveBook.onHoverState.BorderRadius = 1;
+            this.btnSaveBook.onHoverState.BorderRadius = 7;
             this.btnSaveBook.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnSaveBook.onHoverState.BorderThickness = 1;
             this.btnSaveBook.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -917,15 +1027,15 @@
             this.btnSaveBook.onHoverState.IconLeftImage = null;
             this.btnSaveBook.onHoverState.IconRightImage = null;
             this.btnSaveBook.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnSaveBook.OnIdleState.BorderRadius = 1;
+            this.btnSaveBook.OnIdleState.BorderRadius = 7;
             this.btnSaveBook.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnSaveBook.OnIdleState.BorderThickness = 1;
             this.btnSaveBook.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
             this.btnSaveBook.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnSaveBook.OnIdleState.IconLeftImage = null;
+            this.btnSaveBook.OnIdleState.IconLeftImage = global::Book_App.Properties.Resources.data_storage;
             this.btnSaveBook.OnIdleState.IconRightImage = null;
             this.btnSaveBook.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnSaveBook.OnPressedState.BorderRadius = 1;
+            this.btnSaveBook.OnPressedState.BorderRadius = 7;
             this.btnSaveBook.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnSaveBook.OnPressedState.BorderThickness = 1;
             this.btnSaveBook.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -970,7 +1080,7 @@
             this.btnUploadImage.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnUploadImage.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnUploadImage.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnUploadImage.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUploadImage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUploadImage.ForeColor = System.Drawing.Color.White;
             this.btnUploadImage.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUploadImage.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -982,16 +1092,16 @@
             this.btnUploadImage.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnUploadImage.IconSize = 25;
             this.btnUploadImage.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnUploadImage.IdleBorderRadius = 1;
+            this.btnUploadImage.IdleBorderRadius = 5;
             this.btnUploadImage.IdleBorderThickness = 1;
             this.btnUploadImage.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnUploadImage.IdleIconLeftImage = null;
+            this.btnUploadImage.IdleIconLeftImage = global::Book_App.Properties.Resources.upload;
             this.btnUploadImage.IdleIconRightImage = null;
             this.btnUploadImage.IndicateFocus = false;
             this.btnUploadImage.Location = new System.Drawing.Point(341, 478);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnUploadImage.OnDisabledState.BorderRadius = 1;
+            this.btnUploadImage.OnDisabledState.BorderRadius = 5;
             this.btnUploadImage.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnUploadImage.OnDisabledState.BorderThickness = 1;
             this.btnUploadImage.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -999,7 +1109,7 @@
             this.btnUploadImage.OnDisabledState.IconLeftImage = null;
             this.btnUploadImage.OnDisabledState.IconRightImage = null;
             this.btnUploadImage.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnUploadImage.onHoverState.BorderRadius = 1;
+            this.btnUploadImage.onHoverState.BorderRadius = 5;
             this.btnUploadImage.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnUploadImage.onHoverState.BorderThickness = 1;
             this.btnUploadImage.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -1007,22 +1117,22 @@
             this.btnUploadImage.onHoverState.IconLeftImage = null;
             this.btnUploadImage.onHoverState.IconRightImage = null;
             this.btnUploadImage.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnUploadImage.OnIdleState.BorderRadius = 1;
+            this.btnUploadImage.OnIdleState.BorderRadius = 5;
             this.btnUploadImage.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnUploadImage.OnIdleState.BorderThickness = 1;
             this.btnUploadImage.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
             this.btnUploadImage.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnUploadImage.OnIdleState.IconLeftImage = null;
+            this.btnUploadImage.OnIdleState.IconLeftImage = global::Book_App.Properties.Resources.upload;
             this.btnUploadImage.OnIdleState.IconRightImage = null;
             this.btnUploadImage.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnUploadImage.OnPressedState.BorderRadius = 1;
+            this.btnUploadImage.OnPressedState.BorderRadius = 5;
             this.btnUploadImage.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnUploadImage.OnPressedState.BorderThickness = 1;
             this.btnUploadImage.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnUploadImage.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnUploadImage.OnPressedState.IconLeftImage = null;
             this.btnUploadImage.OnPressedState.IconRightImage = null;
-            this.btnUploadImage.Size = new System.Drawing.Size(170, 48);
+            this.btnUploadImage.Size = new System.Drawing.Size(202, 48);
             this.btnUploadImage.TabIndex = 11;
             this.btnUploadImage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUploadImage.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1036,62 +1146,10 @@
             this.ptImageCover.BackColor = System.Drawing.Color.Gainsboro;
             this.ptImageCover.Location = new System.Drawing.Point(341, 245);
             this.ptImageCover.Name = "ptImageCover";
-            this.ptImageCover.Size = new System.Drawing.Size(170, 217);
+            this.ptImageCover.Size = new System.Drawing.Size(202, 217);
             this.ptImageCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptImageCover.TabIndex = 10;
             this.ptImageCover.TabStop = false;
-            // 
-            // bunifuLabel6
-            // 
-            this.bunifuLabel6.AllowParentOverrides = false;
-            this.bunifuLabel6.AutoEllipsis = false;
-            this.bunifuLabel6.CursorType = null;
-            this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel6.Location = new System.Drawing.Point(553, 233);
-            this.bunifuLabel6.Name = "bunifuLabel6";
-            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(48, 20);
-            this.bunifuLabel6.TabIndex = 9;
-            this.bunifuLabel6.Text = "Rating:";
-            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // ratingBook
-            // 
-            this.ratingBook.BackColor = System.Drawing.Color.Transparent;
-            this.ratingBook.DisabledEmptyFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.ratingBook.DisabledRatedFillColor = System.Drawing.Color.DarkGray;
-            this.ratingBook.EmptyBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.ratingBook.EmptyFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.ratingBook.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
-            this.ratingBook.HoverFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
-            this.ratingBook.InnerRadius = 2F;
-            this.ratingBook.Location = new System.Drawing.Point(613, 233);
-            this.ratingBook.Name = "ratingBook";
-            this.ratingBook.OuterRadius = 10F;
-            this.ratingBook.RatedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
-            this.ratingBook.RatedFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(20)))));
-            this.ratingBook.ReadOnly = false;
-            this.ratingBook.RightClickToClear = true;
-            this.ratingBook.Size = new System.Drawing.Size(121, 22);
-            this.ratingBook.TabIndex = 8;
-            this.ratingBook.Text = "bunifuRating1";
-            this.ratingBook.Value = 5;
-            // 
-            // bunifuLabel5
-            // 
-            this.bunifuLabel5.AllowParentOverrides = false;
-            this.bunifuLabel5.AutoEllipsis = false;
-            this.bunifuLabel5.CursorType = null;
-            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel5.Location = new System.Drawing.Point(41, 361);
-            this.bunifuLabel5.Name = "bunifuLabel5";
-            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(82, 20);
-            this.bunifuLabel5.TabIndex = 7;
-            this.bunifuLabel5.Text = "Description:";
-            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // txtDescription
             // 
@@ -1167,21 +1225,6 @@
             this.txtDescription.UseSystemPasswordChar = false;
             this.txtDescription.WordWrap = true;
             // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.CursorType = null;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel3.Location = new System.Drawing.Point(41, 293);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(52, 20);
-            this.bunifuLabel3.TabIndex = 5;
-            this.bunifuLabel3.Text = "Author:";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // txtAuthor
             // 
             this.txtAuthor.AcceptsReturn = false;
@@ -1256,21 +1299,6 @@
             this.txtAuthor.UseSystemPasswordChar = false;
             this.txtAuthor.WordWrap = true;
             // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel2.Location = new System.Drawing.Point(341, 153);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(38, 20);
-            this.bunifuLabel2.TabIndex = 3;
-            this.bunifuLabel2.Text = "Price:";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // txtPrice
             // 
             this.txtPrice.AcceptsReturn = false;
@@ -1334,7 +1362,7 @@
             this.txtPrice.SelectionLength = 0;
             this.txtPrice.SelectionStart = 0;
             this.txtPrice.ShortcutsEnabled = true;
-            this.txtPrice.Size = new System.Drawing.Size(170, 37);
+            this.txtPrice.Size = new System.Drawing.Size(202, 37);
             this.txtPrice.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPrice.TabIndex = 2;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1344,22 +1372,6 @@
             this.txtPrice.TextPlaceholder = "Enter price...";
             this.txtPrice.UseSystemPasswordChar = false;
             this.txtPrice.WordWrap = true;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.Location = new System.Drawing.Point(41, 223);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(33, 20);
-            this.bunifuLabel1.TabIndex = 1;
-            this.bunifuLabel1.Text = "Title:";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // txtTitle
             // 
@@ -1435,16 +1447,6 @@
             this.txtTitle.UseSystemPasswordChar = false;
             this.txtTitle.WordWrap = true;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.bunifuLabel4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1016, 121);
-            this.panel1.TabIndex = 4;
-            // 
             // BookControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1458,16 +1460,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.BookGridView)).EndInit();
             this.detailPage.ResumeLayout(false);
             this.detailPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptImageCover)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptImageCover)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+        private Bunifu.UI.WinForms.BunifuLabel lblAction;
         private Bunifu.UI.WinForms.BunifuPages bunifuPages1;
         private System.Windows.Forms.TabPage bookList;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddBook;

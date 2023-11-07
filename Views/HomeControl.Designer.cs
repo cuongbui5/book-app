@@ -98,7 +98,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1002, 84);
+            this.panel1.Size = new System.Drawing.Size(1002, 99);
             this.panel1.TabIndex = 1;
             // 
             // btnFilter
@@ -148,7 +148,7 @@
             this.btnFilter.IdleIconLeftImage = global::Book_App.Properties.Resources.filter;
             this.btnFilter.IdleIconRightImage = null;
             this.btnFilter.IndicateFocus = false;
-            this.btnFilter.Location = new System.Drawing.Point(838, 36);
+            this.btnFilter.Location = new System.Drawing.Point(869, 46);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnFilter.OnDisabledState.BorderRadius = 1;
@@ -225,13 +225,14 @@
             this.categoryFilterDropDown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.categoryFilterDropDown.ItemHighLightForeColor = System.Drawing.Color.White;
             this.categoryFilterDropDown.ItemTopMargin = 3;
-            this.categoryFilterDropDown.Location = new System.Drawing.Point(622, 44);
+            this.categoryFilterDropDown.Location = new System.Drawing.Point(653, 54);
             this.categoryFilterDropDown.Name = "categoryFilterDropDown";
             this.categoryFilterDropDown.Size = new System.Drawing.Size(210, 32);
             this.categoryFilterDropDown.TabIndex = 5;
             this.categoryFilterDropDown.Text = null;
             this.categoryFilterDropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.categoryFilterDropDown.TextLeftMargin = 5;
+            this.categoryFilterDropDown.Click += new System.EventHandler(this.categoryFilterDropDown_Click);
             // 
             // priceFilterDropDown
             // 
@@ -271,7 +272,7 @@
             "500-1000",
             "1000-2000"});
             this.priceFilterDropDown.ItemTopMargin = 3;
-            this.priceFilterDropDown.Location = new System.Drawing.Point(506, 44);
+            this.priceFilterDropDown.Location = new System.Drawing.Point(537, 54);
             this.priceFilterDropDown.Name = "priceFilterDropDown";
             this.priceFilterDropDown.Size = new System.Drawing.Size(99, 32);
             this.priceFilterDropDown.TabIndex = 4;
@@ -285,7 +286,7 @@
             this.bunifuLabel6.AutoEllipsis = false;
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel6.Location = new System.Drawing.Point(622, 22);
+            this.bunifuLabel6.Location = new System.Drawing.Point(653, 32);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel6.Size = new System.Drawing.Size(56, 17);
@@ -301,7 +302,7 @@
             this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(506, 21);
+            this.bunifuLabel4.Location = new System.Drawing.Point(537, 31);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(31, 17);
@@ -357,7 +358,7 @@
             this.bunifuButton2.IdleIconLeftImage = global::Book_App.Properties.Resources.refresh_button;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(892, 36);
+            this.bunifuButton2.Location = new System.Drawing.Point(923, 46);
             this.bunifuButton2.Name = "bunifuButton2";
             this.bunifuButton2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton2.OnDisabledState.BorderRadius = 1;
@@ -451,10 +452,10 @@
             // 
             this.itemContainer.AutoScroll = true;
             this.itemContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.itemContainer.Location = new System.Drawing.Point(3, 76);
+            this.itemContainer.Location = new System.Drawing.Point(3, 105);
             this.itemContainer.Margin = new System.Windows.Forms.Padding(0);
             this.itemContainer.Name = "itemContainer";
-            this.itemContainer.Size = new System.Drawing.Size(1002, 501);
+            this.itemContainer.Size = new System.Drawing.Size(1002, 472);
             this.itemContainer.TabIndex = 0;
             // 
             // detailProductPage

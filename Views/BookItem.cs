@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Book_App.Models;
+using Book_App.Util;
 using Bunifu.UI.WinForms;
 using Bunifu.UI.WinForms.BunifuAnimatorNS;
 
@@ -36,18 +37,7 @@ namespace Book_App.Views
             lblNameItem.Text=book.Title.ToString();
             ratingItem.Value = book.Rating;
             byte[] imageData = book.ImageCover; 
-            if (imageData != null && imageData.Length > 0)
-            {
-                using (MemoryStream ms = new MemoryStream(imageData))
-                {
-                    ptImageItem.Image = Image.FromStream(ms);
-                }
-            }
-            else
-            {
-                
-                //ptImageItem.Image = null; 
-            }
+            ptImageItem.Image= ImageHelper.byteToImage(imageData);
 
         }
 
@@ -58,7 +48,7 @@ namespace Book_App.Views
         private void ptImageItem_Click(object sender, EventArgs e)
         {
             control.SetPage("detailProductPage");
-            this.home.LoadProductDetail(book);
+            home.LoadProductDetail(book);
         }
     }
 }

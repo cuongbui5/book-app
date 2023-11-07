@@ -1,13 +1,8 @@
 ﻿using Book_App.Database;
 using Book_App.Models;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace Book_App.Repository
 {
@@ -27,105 +22,7 @@ namespace Book_App.Repository
             }
         }
 
-       
-
-        public Category FindCategoryById(string id) { 
-            Category category = null;
-            string query = "select * from category where id=@id";
-            try
-            {
-                DBUtil.Instance.OpenConnection();
-                SqlCommand command = new SqlCommand(query, DBUtil.Instance.Connection);
-                command.Parameters.AddWithValue("@id", id);
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    category = new Category()
-                    {
-                        Id = int.Parse(reader["id"].ToString()),
-                        Name = reader["name"].ToString()
-                    };
-                   
-                    return category;
-                }
-                else
-                {
-                    throw new Exception("Not found Category with id"+id);
-                }
-
-            }catch (Exception ex)
-            {
-                throw new Exception (ex.Message);
-            }
-            finally
-            {
-                DBUtil.Instance.Close();
-            }
-
-
-        }
-
-
-        public List<Category> GetListCategories()
-        {
-            List<Category> categories = new List<Category>();
-            string query = "SELECT * FROM Category";
-            try
-            {
-                DBUtil.Instance.OpenConnection();
-                SqlCommand command = new SqlCommand(query, DBUtil.Instance.Connection);
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    Category category = new Category
-                    {
-                        Id = int.Parse(reader["id"].ToString()),
-                        Name = reader["name"].ToString()
-                    };
-                    categories.Add(category);
-                }
-
-            
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                DBUtil.Instance.Close();
-            }
-
-            return categories;
-        }
-
-
-        public DataSet GetAllCategories()
-        {
-            DataSet result = new DataSet();
-            string query = "select * from category";
-            try
-            {
-                DBUtil.Instance.OpenConnection();
-
-                SqlCommand command = new SqlCommand(query, DBUtil.Instance.Connection);
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(result);
-
-                return result;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                DBUtil.Instance.Close();
-            }
-        }
-
-       
+      
         public bool CreateCategory(Category category)
         {
             try

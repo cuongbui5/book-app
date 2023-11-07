@@ -29,15 +29,9 @@ namespace Book_App.Services
             return UserRepository.Instance.LockUser(userId);   
         }
 
-        public DataSet GetAllUsers()
+        public bool UnLockUserById(string id)
         {
-            DataSet data=UserRepository.Instance.GetAllUsers();
-            return data;
-        }
-
-        public bool DeleteUserById(int id)
-        {
-            return UserRepository.Instance.DeleteUserById(id);
+            return UserRepository.Instance.UnLockUser(id);
         }
     }
 }

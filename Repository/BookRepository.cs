@@ -2,11 +2,8 @@
 using Book_App.Models;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Book_App.Repository
 {
@@ -26,49 +23,7 @@ namespace Book_App.Repository
             }
         }
 
-        public int CountBooksByTitle(string title)
-        {
-            string query = "SELECT COUNT(*) FROM book WHERE title = @title";
-            try
-            {
-                DBUtil.Instance.OpenConnection();
-                SqlCommand command = new SqlCommand(query, DBUtil.Instance.Connection);
-                command.Parameters.AddWithValue("@title", title);
-                int count = (int)command.ExecuteScalar();
-                return count;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                DBUtil.Instance.Close();
-            }
-        }
 
-
-
-        public DataSet GetAllBooks() { 
-            DataSet result = new DataSet();
-            string query = "select * from book";
-            try
-            {
-                DBUtil.Instance.OpenConnection();
-                SqlCommand command=new SqlCommand(query,DBUtil.Instance.Connection);
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(result);
-                return result;
-
-            }catch (Exception ex) {
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                DBUtil.Instance.Close();
-            }
-
-        }
 
         public List<Book> FindBooksByTitle(String title)
         {
@@ -273,7 +228,10 @@ namespace Book_App.Repository
             {
                 throw new Exception(ex.Message);
             }
-            finally { DBUtil.Instance.Close(); }
+            finally { 
+                
+                DBUtil.Instance.Close();
+            }
             return bookList;
         }
 
@@ -351,13 +309,18 @@ namespace Book_App.Repository
             try
             {
                 DBUtil.Instance.OpenConnection();
-                SqlCommand cmd = new SqlCommand(query, DBUtil.Instance.Connection);
-                int rowsAffected = cmd.ExecuteNonQuery();
-                return rowsAffected > 0;
-            }catch (Exception ex)
+                using (SqlCommand cmd = new SqlCommand(query, DBUtil.Instance.Connection))
+                {
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+            catch (Exception ex)
             {
                 throw new Exception (ex.Message);
-            }finally { DBUtil.Instance.Close(); }
+            }finally { 
+                DBUtil.Instance.Close();
+            }
         }
     }
 }

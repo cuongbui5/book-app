@@ -59,9 +59,25 @@ namespace Book_App.Database
             }
         }
 
-
-
-
-
+        public DataTable GetList(string table)
+        {
+            DataTable dt = new DataTable();
+            string query = "select * from " + table;
+            try
+            {
+                OpenConnection();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally {
+                Close();
+            }
+        }
     }
 }

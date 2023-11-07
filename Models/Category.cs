@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Book_App.Models
 {
-    internal class Category
+    class Category
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public Category() { }
+       
     }
 }

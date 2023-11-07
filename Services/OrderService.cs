@@ -20,7 +20,7 @@ namespace Book_App.Services
             }
         }
 
-        public bool CreateOrder(Order order)
+        public string CreateOrder(Order order)
         {
 
             return OrderRepository.Instance.CreateOrder(order);

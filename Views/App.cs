@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Book_App.Database;
 using Book_App.Models;
 using Book_App.Services;
+using Book_App.Util;
 using Book_App.Views;
 using Bunifu.UI.WinForms;
 
@@ -17,12 +19,14 @@ namespace Book_App.Views
     partial class App : UserControl
     {
         private User user;
-        private BunifuPages mainPage;  
+        private BunifuPages mainPage;
         private BookControl bookControl;
         public HomeControl homeControl { get; set; }
         private Cart cartCurrent;
-        private bool authorization=false;
-        private bool IsHomePage=true;
+        private bool authorization = false;
+        private bool IsHomePage = true;
+        private string categoryId = "";
+
 
         public void setCartCurrent(Cart cart)
         {
@@ -31,13 +35,13 @@ namespace Book_App.Views
 
         }
 
-        
-        
+
+
 
         public void setUser(User user)
         {
             this.user = user;
-            if(user.Role=="ADMIN" )
+            if (user.Role == "ADMIN")
             {
                 authorization = true;
             }
@@ -47,18 +51,18 @@ namespace Book_App.Views
             }
             lblUsername.Text = user.UserName;
             lblRole.Text = user.Role;
-           
+
         }
 
-       
+
         public App(BunifuPages mainPage)
         {
-            InitializeComponent();    
+            InitializeComponent();
             this.mainPage = mainPage;
             this.bookControl = new BookControl();
             this.homeControl = new HomeControl();
             bookPage.Controls.Add(this.bookControl);
-            this.bookControl.Dock= DockStyle.Fill;  
+            this.bookControl.Dock = DockStyle.Fill;
             homePage.Controls.Add(this.homeControl);
             this.homeControl.Dock = DockStyle.Fill;
 
@@ -66,11 +70,11 @@ namespace Book_App.Views
 
         }
 
-      
+
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageTitle = "homePage";
+            bunifuPage1.PageTitle = "homePage";
             IsHomePage = true;
         }
 
@@ -82,7 +86,7 @@ namespace Book_App.Views
                 MessageBox.Show("user does not have access rights!");
                 return;
             }
-            bunifuPages1.PageTitle="categoryPage";
+            bunifuPage1.PageTitle = "categoryPage";
             LoadCategoryData();
         }
 
@@ -94,9 +98,9 @@ namespace Book_App.Views
                 MessageBox.Show("user does not have access rights!");
                 return;
             }
-            bunifuPages1.PageTitle = "bookPage";
-            
-           
+            bunifuPage1.PageTitle = "bookPage";
+
+
         }
 
         private void bunifuButton4_Click(object sender, EventArgs e)
@@ -107,21 +111,23 @@ namespace Book_App.Views
                 MessageBox.Show("user does not have access rights!");
                 return;
             }
-            bunifuPages1.PageTitle = "userPage";
+            bunifuPage1.PageTitle = "userPage";
             LoadUserData();
         }
 
-     
 
-       
 
-      
+
+
+
         private void bunifuButton5_Click_1(object sender, EventArgs e)
-        {          
+        {
             mainPage.SetPage("loginPage");
-            bunifuPages1.SetPage("homePage");
+            bunifuPage1.SetPage("homePage");
             bookControl.ControlPage.SetPage("bookList");
             homeControl.ControlPage.SetPage("productPage");
+            homeControl.HomeControl_Load(sender, e);
+
 
 
 
@@ -134,17 +140,21 @@ namespace Book_App.Views
             {
                 cartItemContainer.Controls.Clear();
                 Cart cart = CartService.Instance.GetCartByUserId(user.Id);
-                List<CartItem> cartItems=CartItemService.Instance.GetCartItemsByCartId(cart.Id);
-                if(cartItems.Count==0)
+                List<CartItem> cartItems = CartItemService.Instance.GetCartItemsByCartId(cart.Id);
+                if (cartItems.Count == 0)
                 {
                     MessageBox.Show("empty cart!");
                     return;
                 }
                 cartItems.ForEach(cartItem =>
                 {
-                    CartItemControl cartItemControl = new CartItemControl(cartItem,this);
+                    CartItemControl cartItemControl = new CartItemControl(cartItem, this);
                     cartItemContainer.Controls.Add(cartItemControl);
+                    
                 });
+                Panel panel = new Panel();
+                panel.Height = 30;
+                cartItemContainer.Controls.Add(panel);
             }
             catch (Exception ex)
             {
@@ -158,7 +168,7 @@ namespace Book_App.Views
             {
                 float totalPrice = CartItemService.Instance.GetTotalPriceByCartId(cartCurrent.Id);
                 lblTotal.Text = totalPrice.ToString();
-            }catch (Exception ex)
+            } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -166,36 +176,42 @@ namespace Book_App.Views
 
         private void bunifuButton6_Click(object sender, EventArgs e)
         {
-            IsHomePage=false;
-            if (user!=null)
+            IsHomePage = false;
+            if (user != null)
             {
-                bunifuPages1.SetPage("cartPage");
+                bunifuPage1.SetPage("cartPage");
                 LoadCartItem();
                 LoadTotalPrice();
             }
-           
+
             //MessageBox.Show("Admin does not have access rights!");
 
         }
 
-    
 
-    
+
+
         private void bunifuButton7_Click(object sender, EventArgs e)
         {
-           
+
             DataGridViewRow selectedRow = bunifuDataGridView1.CurrentRow;
             if (selectedRow != null)
             {
                 try
                 {
-                    string id =selectedRow.Cells["id"].Value.ToString();
+                    string id = selectedRow.Cells["id"].Value.ToString();
                     string role = selectedRow.Cells["role"].Value.ToString();
+                    bool isLocked = selectedRow.Cells["isLocked"].Value.Equals(true);
+                    if (isLocked)
+                    {
+                        MessageBox.Show("Is locked!");
+                        return;
+                    }
                     if (user.Id.ToString() == id || role == "ADMIN")
                     {
                         MessageBox.Show("Unauthorized!");
                         return;
-                    }                
+                    }
                     bool result = UserService.Instance.LockUserById(id);
                     if (result)
                     {
@@ -207,110 +223,91 @@ namespace Book_App.Views
                         MessageBox.Show("Something went wrong!");
                     }
                 }
-                catch(Exception ex) { 
+                catch (Exception ex) {
                     MessageBox.Show(ex.Message);
                 }
-              
-               
+
+
 
             }
         }
 
         public void LoadUserData()
         {
-            bunifuDataGridView1.DataSource = UserService.Instance.GetAllUsers().Tables[0];
+            bunifuDataGridView1.DataSource = DBUtil.Instance.GetList("users");
         }
 
 
         public void LoadCategoryData()
         {
-            categoryGridView.DataSource = CategoryService.Instance.GetAllCategories().Tables[0];
+            categoryGridView.DataSource = DBUtil.Instance.GetList("category");
         }
         private void bunifuDataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.ColumnIndex == 2 && e.Value != null)
-            {            
+            {
                 string password = e.Value.ToString();
                 e.Value = new string('*', password.Length);
             }
         }
 
-        private void btnAddCategory_Click(object sender, EventArgs e)
+      
+
+        public void RefreshFormCatrgory()
         {
+            categoryId = string.Empty;
+            txtCategoryName.Text = string.Empty;
+        }
+       
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            
+            string newName = txtCategoryName.Text.Trim();
+            if(newName == string.Empty)
+            {
+                MessageBox.Show("Name cannot be left blank");
+                return;
+            }
             try
             {
-                string id = txtCategoryId.Text.Trim();
-                string newName = txtCategoryName.Text.Trim();
-                if (id == "" && newName != "")
+                if(categoryId == "" && newName != "")
                 {
                     bool result = CategoryService.Instance.CreateCategory(newName);
                     if (result)
                     {
                         MessageBox.Show("Add category successfully!");
                         LoadCategoryData();
+                        RefreshFormCatrgory();
+                       
+
                     }
                     else
                     {
                         MessageBox.Show("Something went wrong!");
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Input not valid!");
+                    return;
                 }
 
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-
-            }
-
-
-
-
-
-
-
-
-
-        }
-
-    
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            txtCategoryId.Text = string.Empty;
-            txtCategoryName.Text = string.Empty;
-        }
-
-        private void btnEditCategory_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string id = txtCategoryId.Text.Trim();
-                string newName = txtCategoryName.Text.Trim();
-                if (id !="" && newName!="")
+                if (categoryId != "" && newName != "")
                 {
-                    bool result = CategoryService.Instance.updateCategoryById(newName,id);
+                    bool result = CategoryService.Instance.updateCategoryById(newName, categoryId);
                     if (result)
                     {
                         MessageBox.Show("Update category successfylly!");
                         LoadCategoryData();
+                        RefreshFormCatrgory();
+                        
                     }
                     else
                     {
                         MessageBox.Show("Something went wrong!");
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Input not valid!");
-                }
+                    return;
 
+                }
+               
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -318,37 +315,51 @@ namespace Book_App.Views
 
         private void btnDeteleCategory_Click(object sender, EventArgs e)
         {
-            DataGridViewRow selectedRow=categoryGridView.CurrentRow;
-            if (selectedRow != null)
+            if (categoryId != "")
             {
-                string id = selectedRow.Cells["id"].Value.ToString();
-                try
+                DialogResult dialog = MessageBox.Show("Do you want to delete category with id="+categoryId, "Delete category", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
                 {
-                    bool result = CategoryService.Instance.deleteCategoryById(id);
-                    if (result)
+                    try
                     {
-                        MessageBox.Show("Delete category successfully!");
-                        LoadCategoryData();
+                        bool result = CategoryService.Instance.deleteCategoryById(categoryId);
+                        if (result)
+                        {
+                            MessageBox.Show("Delete category successfully!");
+                            LoadCategoryData();
+                            RefreshFormCatrgory();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Something went wrong!");
+                        }
+
 
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Something went wrong!");
-                    }
-                   
-                   
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                        MessageBox.Show(ex.Message);
 
+                    }
                 }
+                else
+                {
+                    return;
+                }
+
+
 
             }
+            else
+            {
+                MessageBox.Show("No action!");
+            }
            
+
         }
 
-       
+
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (!IsHomePage)
@@ -367,53 +378,67 @@ namespace Book_App.Views
                     MessageBox.Show("Please enter title!");
                 }
 
-                
+
             }
 
-           
+
         }
 
-     
+
 
         private void bunifuButton12_Click(object sender, EventArgs e)
         {
 
-           
             if (lblTotal.Text.Trim() == "0")
             {
                 return;
             }
             Order order = new Order();
-            order.Total=float.Parse(lblTotal.Text);
-            order.CreatedAt= DateTime.Now;
+            order.Total = float.Parse(lblTotal.Text);
+            order.CreatedAt = DateTime.Now;
             order.UserId = cartCurrent.UserId;
+
             try
             {
-                bool result=OrderService.Instance.CreateOrder(order);
+                string orderId = OrderService.Instance.CreateOrder(order);
+                List<CartItem> items = CartItemService.Instance.GetCartItemsByCartId(cartCurrent.Id);
+
+                if (items.Count > 0)
+                {
+                    foreach (var item in items)
+                    {
+                        
+                        OrderItem orderItem = MapperClass.CartItemToOrderItem(item);
+                        orderItem.OrderId = int.Parse(orderId);
+                        OrderItemService.Instance.CreateOrderItem(orderItem);
+
+                    }
+                }
                 bool deleteAllCartItem = CartItemService.Instance.DeleteCartItemByCartId(cartCurrent.Id);
-                if(result&&deleteAllCartItem)
+                if (orderId != null && deleteAllCartItem)
                 {
                     MessageBox.Show("Create order successfully!");
                     LoadCartItem();
                     LoadTotalPrice();
-                    
-                    
+
+
                 }
                 else
                 {
                     MessageBox.Show("Somethings wrong!");
                 }
-            }catch (Exception ex)
+            } catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
         public void LoadOrder()
         {
             try
             {
-                orderGridView.DataSource = OrderService.Instance.GetOrdersByUserId(user.Id).Tables[0];
-            }catch (Exception ex)
+                dgvOrder.DataSource = OrderService.Instance.GetOrdersByUserId(user.Id).Tables[0];
+            } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -421,20 +446,104 @@ namespace Book_App.Views
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            bunifuPages1.SetPage("orderPage");
-            LoadOrder();    
+            bunifuPage1.SetPage("orderPage");
+            LoadOrder();
         }
 
-      
+
 
         private void categoryGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow selectedRow = categoryGridView.CurrentRow;
             if (selectedRow != null)
             {
-                txtCategoryId.Text = selectedRow.Cells["id"].Value.ToString();
+                categoryId = selectedRow.Cells["id"].Value.ToString();
                 txtCategoryName.Text = selectedRow.Cells["name"].Value.ToString();
             }
         }
+
+
+
+        private void btnUnlock_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = bunifuDataGridView1.CurrentRow;
+            if (selectedRow != null)
+            {
+                try
+                {
+                    string id = selectedRow.Cells["id"].Value.ToString();
+                    string role = selectedRow.Cells["role"].Value.ToString();
+                    bool isLocked = selectedRow.Cells["isLocked"].Value.Equals(false);
+                    if (isLocked)
+                    {
+                        MessageBox.Show("Not lock!");
+                        return;
+                    }
+
+                    if (user.Id.ToString() == id || role == "ADMIN")
+                    {
+                        MessageBox.Show("Unauthorized!");
+                        return;
+                    }
+                    bool result = UserService.Instance.UnLockUserById(id);
+                    if (result)
+                    {
+                        MessageBox.Show("UnLock user successfully!");
+                        LoadUserData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something went wrong!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+
+
+            }
+
+        }
+
+        private void orderGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            bunifuPage1.SetPage("orderDetail");
+            showOrderItem();
+        }
+
+        public void showOrderItem()
+        {
+            DataGridViewRow selectedRow = dgvOrder.CurrentRow;
+            if (selectedRow != null)
+            {
+                String orderId = selectedRow.Cells["id"].Value.ToString();
+                lblOrderId.Text ="#"+ orderId;
+
+
+                List<OrderItem> items = OrderItemService.Instance.GetOrderItemsByOrderId(orderId);
+                orderItemContainer.Controls.Clear();
+                items.ForEach(orderItem =>
+                {
+                    OrderItemControl item = new OrderItemControl(orderItem);
+                    orderItemContainer.Controls.Add(item);
+
+                });
+
+                lblTotalOrder.Text=selectedRow.Cells["total"].Value.ToString();
+
+
+
+            }
+        }
+
+        private void bunifuButton8_Click(object sender, EventArgs e)
+        {
+            RefreshFormCatrgory();
+        }
+
+       
     }
 }

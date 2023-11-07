@@ -64,10 +64,7 @@ namespace Book_App.Services
             return BookRepository.Instance.DeleteBook(id);
         }
 
-        public DataSet LoadDataSetBooks()
-        {
-            return BookRepository.Instance.GetAllBooks();
-        }
+      
        
     }
 }

@@ -22,15 +22,7 @@ namespace Book_App.Services
             }
         }
 
-        public List<Category> getListCategory()
-        {
-            return CategoryRepository.Instance.GetListCategories();
-        }
-        public DataSet GetAllCategories()
-        {
-            DataSet data = CategoryRepository.Instance.GetAllCategories();
-            return data;
-        }
+      
 
         public bool CreateCategory(String name) {        
             Category category = new Category()

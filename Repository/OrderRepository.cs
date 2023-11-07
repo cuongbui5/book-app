@@ -1,13 +1,9 @@
 ﻿using Book_App.Database;
 using Book_App.Models;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static TheArtOfDev.HtmlRenderer.Adapters.RGraphicsPath;
+using System.Windows.Forms;
 
 namespace Book_App.Repository
 {
@@ -52,10 +48,10 @@ namespace Book_App.Repository
             }
         }
 
-        public bool CreateOrder(Order order)
+        public string CreateOrder(Order order)
         {
 
-            string query = "insert into orders(total,user_id,created_at) values(@total,@user_id,@createdAt)";
+            string query = "insert into orders(total,user_id,created_at) values(@total,@user_id,@createdAt); SELECT SCOPE_IDENTITY()";
             try
             {
                 DBUtil.Instance.OpenConnection();
@@ -63,9 +59,12 @@ namespace Book_App.Repository
                 cmd.Parameters.AddWithValue("@total", order.Total);
                 cmd.Parameters.AddWithValue("@user_id", order.UserId);
                 cmd.Parameters.AddWithValue("@createdAt", order.CreatedAt);
-                return cmd.ExecuteNonQuery() > 0;
 
-            }catch (Exception ex)
+                return cmd.ExecuteScalar().ToString();
+
+
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }

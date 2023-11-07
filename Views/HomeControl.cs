@@ -1,17 +1,15 @@
-﻿using Book_App.Models;
+﻿using Book_App.Commons;
+using Book_App.Database;
+using Book_App.Models;
 using Book_App.Services;
+using Book_App.Util;
 using Bunifu.Framework.UI;
 using Bunifu.UI.WinForms;
-using Bunifu.UI.WinForms.BunifuAnimatorNS;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace Book_App.Views
@@ -34,31 +32,15 @@ namespace Book_App.Views
             this.cartCurrent = cart;
         }
 
-        public void LoadCategory()
-        {
-            categoryFilterDropDown.Items.Clear();
-            try
-            {
-                List<Category> categories = CategoryService.Instance.getListCategory();
-                categories.ForEach(c =>
-                {
-                    categoryFilterDropDown.Items.Add(c.Id+"-"+c.Name);
-                });
-
-            }
-            catch(Exception ex) {
-                MessageBox.Show(ex.Message);
-            }
-           
-           
-            
-        }
-
        
 
-        private void HomeControl_Load(object sender, EventArgs e)
+        public void HomeControl_Load(object sender, EventArgs e)
         {
-            LoadCategory();
+          
+            List<Book> books = LoadBooks();
+            ShowListBook(books);
+           
+           
 
         }
 
@@ -69,7 +51,6 @@ namespace Book_App.Views
             {
                 List<Book> books = BookService.Instance.FindBooksByTitle(title);
                 ShowListBook(books);
-               
 
             }
             catch (Exception ex)
@@ -123,18 +104,8 @@ namespace Book_App.Views
             ratingProduct.Value = book.Rating;
             rtbDescription.Text = book.Description;
             byte[] imageData = book.ImageCover;
-            if (imageData != null && imageData.Length > 0)
-            {
-                using (MemoryStream ms = new MemoryStream(imageData))
-                {
-                    ptImageCover.Image = Image.FromStream(ms);
-                }
-            }
-            else
-            {
-
-                ptImageCover.Image = null;
-            }
+            ptImageCover.Image = ImageHelper.byteToImage(imageData);
+          
         }
 
      
@@ -146,19 +117,12 @@ namespace Book_App.Views
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
-           
-            Refresh();
+
+            HomeControl_Load(sender, e);
 
         }
 
-        public void Refresh()
-        {
-            List<Book> books = LoadBooks();
-            ShowListBook(books);      
-            categoryFilterDropDown.Text = "";
-            priceFilterDropDown.Text = "";
-
-        }
+      
 
         private void btnCartItem_Click(object sender, EventArgs e)
         {
@@ -206,14 +170,7 @@ namespace Book_App.Views
                 MessageBox.Show(ex.Message);
             }
         }
-        public int getCategoryByString(string input)
-        {
-            string[] parts = input.Split('-');
-            string id = parts[0];
-            return int.Parse(id);
-
-
-        }
+       
 
        
 
@@ -224,7 +181,7 @@ namespace Book_App.Views
                 List<Book> books=new List<Book>();
                 
                 string dataPrice;
-                string dataCategory;
+              
 
 
                 if (priceFilterDropDown.SelectedItem == null && categoryFilterDropDown.SelectedItem == null)
@@ -235,8 +192,8 @@ namespace Book_App.Views
                 else if (priceFilterDropDown.SelectedItem == null && categoryFilterDropDown.SelectedItem != null)
                 {
                     //filter by category
-                    dataCategory = categoryFilterDropDown.SelectedItem.ToString();
-                    int categoryId = getCategoryByString(dataCategory);
+                   
+                    int categoryId = (int)categoryFilterDropDown.SelectedValue;
                     books =BookService.Instance.FilterBookByCategoryId(categoryId) ;    
 
                 }
@@ -253,8 +210,7 @@ namespace Book_App.Views
                 {
                     //filter by category and price
                     dataPrice = priceFilterDropDown.SelectedItem.ToString();
-                    dataCategory = categoryFilterDropDown.SelectedItem.ToString();
-                    int categoryId = getCategoryByString(dataCategory);
+                    int categoryId = (int)categoryFilterDropDown.SelectedValue;
                     string[] parts = dataPrice.Split('-');
                     float min = float.Parse(parts[0]);
                     float max = float.Parse(parts[1]);
@@ -271,8 +227,9 @@ namespace Book_App.Views
            
         }
 
-       
-
-      
+        private void categoryFilterDropDown_Click(object sender, EventArgs e)
+        {
+            LoadData.LoadDropDown("category", categoryFilterDropDown);
+        }
     }
 }

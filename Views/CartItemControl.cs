@@ -1,5 +1,6 @@
 ﻿using Book_App.Models;
 using Book_App.Services;
+using Book_App.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace Book_App.Views
             this.cartItem = cartItem;
             this.app = app;
         }
-
+       
         private void CartItemControl_Load(object sender, EventArgs e)
         {
             lblTitle.Text=cartItem.Book.Title;
@@ -31,18 +32,9 @@ namespace Book_App.Views
             txtQuantity.Text=cartItem.Quantity.ToString();
             lblCreatedAt.Text=cartItem.CreateAt.ToString();
             byte[] imageCover=cartItem.Book.ImageCover;
-            if(imageCover != null&& imageCover.Length > 0)
-            {
-                using(MemoryStream ms=new MemoryStream(imageCover))
-                {
-                    ptImageCover.Image=Image.FromStream(ms);
-                }
-            }
-            else
-            {
-                ptImageCover = null;
-            }
-           
+            ptImageCover.Image= ImageHelper.byteToImage(imageCover);
+
+
         }
 
         private void btnDeleteCartItem_Click(object sender, EventArgs e)
@@ -79,12 +71,15 @@ namespace Book_App.Views
                         bool result = CartItemService.Instance.UpdateQuantityByCartId(quantity, cartItem.Id);
                         if (result)
                         {
-                            app.LoadCartItem();
+                            
                             app.LoadTotalPrice();
+                           
                         }
                         else
                         {
+                           
                             MessageBox.Show("Somethings wrong!");
+                            app.LoadCartItem();
                         }
                     }
                     catch (Exception ex)

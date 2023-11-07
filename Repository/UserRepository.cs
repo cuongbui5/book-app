@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 using Book_App.Database;
 using Book_App.Models;
@@ -24,77 +23,9 @@ namespace Book_App.Repository
             }
         }
 
-        public bool DeleteUserById(int id)
-        {
-            string query = "delete from users where id = @id";
-            try
-            {
-                DBUtil.Instance.OpenConnection();
-                SqlCommand command = new SqlCommand(query, DBUtil.Instance.Connection);
-                command.Parameters.AddWithValue("@id", id);
-                return command.ExecuteNonQuery() > 0;
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                DBUtil.Instance.Close();
-            }
-           
-        }
 
 
-        public DataSet GetAllUsers()
-        {
-            DataSet result = new DataSet();
-            string query = "select * from users";
-            try
-            {
-                DBUtil.Instance.OpenConnection();
-
-                SqlCommand command = new SqlCommand(query, DBUtil.Instance.Connection);
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(result);
-
-                return result;
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }finally
-            {
-                DBUtil.Instance.Close();
-            }
-           
-
-            
-        }
-
-        public bool LockUser(string userId) {
-            string query = "update users set IsLocked=1 where id=@userId";
-            try
-            {
-                DBUtil.Instance.OpenConnection();
-                SqlCommand command = new SqlCommand(query, DBUtil.Instance.Connection);
-                command.Parameters.AddWithValue("@userId", userId);
-                return command.ExecuteNonQuery()>0;
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            finally
-            {
-                DBUtil.Instance.Close();
-            }
-
-        }
+       
 
 
         public string CreateUser(User user)
@@ -164,7 +95,47 @@ namespace Book_App.Repository
            
         }
 
-     
+        public bool LockUser(string userId)
+        {
+            string query = "update users set IsLocked=1 where id=@userId";
+            try
+            {
+                DBUtil.Instance.OpenConnection();
+                SqlCommand command = new SqlCommand(query, DBUtil.Instance.Connection);
+                command.Parameters.AddWithValue("@userId", userId);
+                return command.ExecuteNonQuery() > 0;
 
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                DBUtil.Instance.Close();
+            }
+
+        }
+
+        public bool UnLockUser(string userId)
+        {
+            string query = "update users set IsLocked=0 where id=@userId";
+            try
+            {
+                DBUtil.Instance.OpenConnection();
+                SqlCommand command = new SqlCommand(query, DBUtil.Instance.Connection);
+                command.Parameters.AddWithValue("@userId", userId);
+                return command.ExecuteNonQuery() > 0;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                DBUtil.Instance.Close();
+            }
+        }
     }
 }

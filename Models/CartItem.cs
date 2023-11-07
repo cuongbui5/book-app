@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Book_App.Models
 {
-    internal class CartItem
+    class CartItem
     {
         public int Id { get; set; }
         public int BookId { get;set; }
@@ -16,6 +16,6 @@ namespace Book_App.Models
         public int Quantity { get; set; }
         public DateTime CreateAt { get; set; }
 
-        public CartItem() { }
+       
     }
 }
